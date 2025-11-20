@@ -1,4 +1,4 @@
-#  COCOMO-Based Effort and Schedule Estimation for a Medium-Complexity Project
+#  COCOMO-Based Effort and Schedule Estimation for our Project
 
 This document provides a **Basic COCOMO** (Constructive Cost Model) estimation for the effort, schedule, and implied team size required for the software development project.
 
