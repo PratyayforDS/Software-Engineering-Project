@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.0">
+  <diagram id="CRC_Diagram" name="CRC Diagram">
+    <mxGraphModel dx="1489" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="teacher" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc" value="Teacher&#xa;---&#xa;Responsibilities:&#xa;- Login, authenticate&#xa;- Create exam&#xa;- Upload answer sheets&#xa;&#xa;Collaborators:&#xa;- AuthService&#xa;- Exam&#xa;- StudentAnswerSheet&#xa;- Database" vertex="1">
+          <mxGeometry height="240" width="260" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc" value="AuthService&#xa;---&#xa;Responsibilities:&#xa;- Authenticate user&#xa;- Authorize actions&#xa;- Logout&#xa;&#xa;Collaborators:&#xa;- Teacher" vertex="1">
+          <mxGeometry height="220" width="260" x="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="exam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4" value="Exam&#xa;---&#xa;Responsibilities:&#xa;- Manage exam info&#xa;- Store questions&#xa;- Add questions&#xa;- Set answer key&#xa;&#xa;Collaborators:&#xa;- Question&#xa;- AnswerKey&#xa;- Database" vertex="1">
+          <mxGeometry height="260" width="260" x="640" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="question" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc" value="Question&#xa;---&#xa;Responsibilities:&#xa;- Store question text/type&#xa;- Provide expected answers&#xa;&#xa;Collaborators:&#xa;- AnswerKey&#xa;- Exam&#xa;- LLMModule" vertex="1">
+          <mxGeometry height="230" width="260" x="940" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="answerkey" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc" value="AnswerKey&#xa;---&#xa;Responsibilities:&#xa;- Store answers for questions&#xa;- Return expected answer&#xa;&#xa;Collaborators:&#xa;- Exam&#xa;- Question&#xa;- EvaluationEngine" vertex="1">
+          <mxGeometry height="230" width="260" x="1240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="answersheet" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7" value="StudentAnswerSheet&#xa;---&#xa;Responsibilities:&#xa;- Store scanned sheet&#xa;- Store extracted text&#xa;- Upload sheet&#xa;- Link to exam&#xa;&#xa;Collaborators:&#xa;- OCRModule&#xa;- Exam&#xa;- Database&#xa;- EvaluationEngine" vertex="1">
+          <mxGeometry height="270" width="300" x="40" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ocr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc" value="OCRModule&#xa;---&#xa;Responsibilities:&#xa;- Preprocess images&#xa;- Extract text using OCR&#xa;&#xa;Collaborators:&#xa;- StudentAnswerSheet&#xa;- EvaluationEngine" vertex="1">
+          <mxGeometry height="210" width="260" x="380" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="eval" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4" value="EvaluationEngine&#xa;---&#xa;Responsibilities:&#xa;- Evaluate objective answers&#xa;- Evaluate subjective answers&#xa;- Produce Result&#xa;&#xa;Collaborators:&#xa;- StudentAnswerSheet&#xa;- AnswerKey&#xa;- LLMModule&#xa;- Report" vertex="1">
+          <mxGeometry height="260" width="300" x="680" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="llm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc" value="LLMModule&#xa;---&#xa;Responsibilities:&#xa;- Evaluate subjective responses&#xa;- Provide feedback&#xa;&#xa;Collaborators:&#xa;- EvaluationEngine&#xa;- AnswerKey&#xa;- Question" vertex="1">
+          <mxGeometry height="220" width="260" x="1020" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="result" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc" value="Result&#xa;---&#xa;Responsibilities:&#xa;- Store total marks&#xa;- Store feedback&#xa;- Link to report&#xa;&#xa;Collaborators:&#xa;- Report&#xa;- Database" vertex="1">
+          <mxGeometry height="220" width="260" x="1320" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="report" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc" value="Report&#xa;---&#xa;Responsibilities:&#xa;- Generate report&#xa;- Export as PDF/CSV&#xa;&#xa;Collaborators:&#xa;- Result&#xa;- Database" vertex="1">
+          <mxGeometry height="210" width="260" x="40" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7" value="Database&#xa;---&#xa;Responsibilities:&#xa;- Store exams, questions, keys&#xa;- Store answer sheets&#xa;- Store results&#xa;- Retrieve records&#xa;&#xa;Collaborators:&#xa;- All components" vertex="1">
+          <mxGeometry height="240" width="300" x="340" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="9C21zVNLiHpohStIbw4t-1" parent="1" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;dx=40;dy=20;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="500" y="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
