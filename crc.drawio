@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.0">
   <diagram id="CRC_Diagram" name="CRC Diagram">
-    <mxGraphModel dx="1489" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2316" dy="1249" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -39,9 +39,6 @@
         </mxCell>
         <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7" value="Database&#xa;---&#xa;Responsibilities:&#xa;- Store exams, questions, keys&#xa;- Store answer sheets&#xa;- Store results&#xa;- Retrieve records&#xa;&#xa;Collaborators:&#xa;- All components" vertex="1">
           <mxGeometry height="240" width="300" x="340" y="660" as="geometry" />
-        </mxCell>
-        <mxCell id="9C21zVNLiHpohStIbw4t-1" parent="1" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;dx=40;dy=20;" value="" vertex="1">
-          <mxGeometry height="80" width="80" x="500" y="260" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
